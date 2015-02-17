@@ -1,0 +1,838 @@
+@import "normalize.styl"
+@import "icons.styl"
+
+azul_cielo = #3498db
+gris_verdoso = #95a5a6
+azul_negro = #34495e
+
+html
+	height 100%
+
+li,
+ul
+	padding 0
+	list-style none
+
+p
+	margin 0
+	padding 0
+
+body
+	background #f0f4fb
+	font-size 16px
+	font-family century gothic 
+	height 100%
+
+table, th, td
+	border 1px solid #bfbfbf
+
+
+#breadcrumb
+	padding 1em
+	& a
+		display inline-block
+		color azul_cielo
+		text-decoration none
+
+.logo-top
+	background white
+	border-radius 0 0 1em 1em
+	position absolute
+	top 0
+	left 1em
+	padding 1em
+	width 180px
+	& img
+		border-radius 0 0 1em 1em
+		width 100%
+
+#menu-home
+	background azul_negro
+	width 100%
+	& ul 
+		margin 0
+		padding 0
+		text-align right
+		width 100%
+		& li
+			display inline-block
+			list-style none
+			padding .5em
+			& a
+				color whitesmoke
+				text-decoration none
+
+#content-home
+	width 100%
+	& .nosotros
+		background #c1c9c7
+		padding 2em 0
+		width 100%
+		& .content
+			margin 0 auto
+			width 1100px
+			& div
+				display inline-block
+				margin 0 1em
+				width 310px
+				& h1
+					color #373938
+					text-align center
+				& p
+					color #373938
+
+#pie
+	background azul_negro
+	padding 2em 0
+	width 100%			
+	& .content
+		margin 0 auto
+		text-align center
+		width 1000px
+		& div
+			display inline-block
+			width 280px
+			& h1
+				color whitesmoke
+				font-size 1.3em
+				margin 0 0 1em 0
+			& p
+				color whitesmoke
+			& a
+				color whitesmoke
+		& .one
+			border-right 2px dotted whitesmoke
+
+.close-perfil
+	color azul_negro
+	padding 4em 0
+	text-align center
+
+#cabeza-img
+	background url("/media/img/header.jpg") center center
+	background-repeat no-repeat
+	background-attachment fixed
+	height 320px
+	-webkit-background-size cover
+	-moz-background-size cover
+	-o-background-size cover
+	background-size cover
+	width 100%
+	text-align center
+	padding 7% 0				
+
+.title-panel
+	color gris_verdoso
+	font-size 1.6em
+	font-weight normal
+	margin 2em 1em	
+
+#addstudents , #editstudents
+	padding 2em 0
+	width 100%
+	& .title-panel
+		color gris_verdoso
+		font-size 1.6em
+		font-weight normal
+		text-align center
+		margin 2em 1em
+	& form
+		margin 1em auto
+		width 60%
+		& label
+			display block
+			color azul_negro
+			font-size 1.2em
+			margin 1em 0
+		& .labeldentro
+			display inline-block
+			color azul_negro
+			font-size 1.2em
+			margin 1em 0
+		& input[type="text"], input[type="password"]
+			display block
+			color gris_verdoso
+			font-size 1.2em
+			height 2em
+			margin 1em 0
+			padding 0 1em
+			width 100%
+		& input[type="radio"]
+			margin 0 1em 0 1em
+		& select
+			outline none
+			border 1px solid gris_verdoso
+			display block
+			color gris_verdoso
+			font-size 1em
+			height 2em
+			margin 1em 0
+			padding 0 1em
+			width 250px
+		& textarea 
+			display block
+			color gris_verdoso
+			font-size 1.2em
+			height 150px
+			max-height 150px
+			margin 1em 0
+			padding 1em 1em
+			width 100%
+			max-width 100%
+		& .submit-btn
+			text-align center
+			width 100%
+			& input[type="submit"]
+				color azul_negro
+				background none
+				border 2px solid azul_negro
+				border-radius .3em
+				font-weight bold
+				padding .4em 1.8em
+				margin 2em 0
+				outline none
+				&:active
+					color #bc2932
+					border 2px solid #bc2932
+
+#addteachers, #editteachers
+	padding 2em 0
+	width 100%
+	& .title-panel
+		color gris_verdoso
+		font-size 1.6em
+		font-weight normal
+		text-align center
+		margin 2em 0
+	& form
+		margin 1em auto
+		width 60%
+		& label
+			display block
+			color azul_negro
+			font-size 1.2em
+			margin 1em 0
+		& .labeldentro
+			display inline-block
+			color azul_negro
+			font-size 1.2em
+			margin 1em 0
+		& input[type="text"], input[type="password"]
+			display block
+			color gris_verdoso
+			font-size 1.2em
+			height 2em
+			margin 1em 0
+			padding 0 1em
+			width 100%
+		& input[type="radio"]
+			margin 0 1em 0 1em
+		& select
+			outline none
+			border 1px solid gris_verdoso
+			display block
+			color gris_verdoso
+			font-size 1em
+			height 2em
+			margin 1em 0
+			padding 0 1em
+			width 250px
+		& textarea 
+			display block
+			color gris_verdoso
+			font-size 1.2em
+			height 150px
+			max-height 150px
+			margin 1em 0
+			padding 1em 1em
+			width 100%
+			max-width 100%
+		& .submit-btn
+			text-align center
+			width 100%
+			& input[type="submit"]
+				color azul_negro
+				background none
+				border 2px solid azul_negro
+				border-radius .3em
+				font-weight bold
+				padding .4em 1.8em
+				margin 2em 0
+				outline none
+				&:active
+					color #bc2932
+					border 2px solid #bc2932
+
+#addtutor, #edittutor
+	padding 2em 0
+	width 100%
+	& .title-panel
+		color gris_verdoso
+		font-size 1.6em
+		font-weight normal
+		text-align center
+		margin 2em 0
+	& form
+		margin 1em auto
+		width 60%
+		& label
+			display block
+			color azul_negro
+			font-size 1.2em
+			margin 1em 0
+		& .labeldentro
+			display inline-block
+			color azul_negro
+			font-size 1.2em
+			margin 1em 0
+		& input[type="text"], input[type="password"]
+			display block
+			color gris_verdoso
+			font-size 1.2em
+			height 2em
+			margin 1em 0
+			padding 0 1em
+			width 100%
+		& input[type="radio"]
+			margin 0 1em 0 1em
+		& select
+			outline none
+			border 1px solid gris_verdoso
+			display block
+			color gris_verdoso
+			font-size 1em
+			height 2em
+			margin 1em 0
+			padding 0 1em
+			width 250px
+		& textarea 
+			display block
+			color gris_verdoso
+			font-size 1.2em
+			height 150px
+			max-height 150px
+			margin 1em 0
+			padding 1em 1em
+			width 100%
+			max-width 100%
+		& .submit-btn
+			text-align center
+			width 100%
+			& input[type="submit"]
+				color azul_negro
+				background none
+				border 2px solid azul_negro
+				border-radius .3em
+				font-weight bold
+				padding .4em 1.8em
+				margin 2em 0
+				outline none
+				&:active
+					color #bc2932
+					border 2px solid #bc2932
+
+#addgroups, #editgroup
+	padding 2em 0
+	width 100%
+	& .title-panel
+		color gris_verdoso
+		font-size 1.6em
+		font-weight normal
+		text-align center
+		margin 2em 0
+	& form
+		margin 1em auto
+		width 60%
+		& input[type="text"]
+			display block
+			color gris_verdoso
+			font-size 1.2em
+			height 2em
+			margin 1em 0
+			padding 0 1em
+			width 100%
+		& .submit-btn
+			text-align center
+			width 100%
+			& input[type="submit"]
+				color azul_negro
+				background none
+				border 2px solid azul_negro
+				border-radius .3em
+				font-weight bold
+				padding .4em 1.8em
+				margin 2em 0
+				outline none
+				&:active
+					color #bc2932
+					border 2px solid #bc2932
+
+#addmatter, #editmatter
+	padding 2em 0
+	width 100%
+	& .title-panel
+		color gris_verdoso
+		font-size 1.6em
+		font-weight normal
+		text-align center
+		margin 2em 0
+	& form
+		margin 1em auto
+		width 60%
+		& input[type="text"]
+			display block
+			color gris_verdoso
+			font-size 1.2em
+			height 2em
+			margin 1em 0
+			padding 0 1em
+			width 100%
+		& .submit-btn
+			text-align center
+			width 100%
+			& input[type="submit"]
+				color azul_negro
+				background none
+				border 2px solid azul_negro
+				border-radius .3em
+				font-weight bold
+				padding .4em 1.8em
+				margin 2em 0
+				outline none
+				&:active
+					color #bc2932
+					border 2px solid #bc2932
+
+& #editrelation
+	margin 2em auto
+	width 60%
+	& .title-panel
+		color gris_verdoso
+		font-size 1.6em
+		font-weight normal
+		text-align center
+		margin 2em 0
+	& form
+		display inline-block
+		text-align center
+		width 100%
+		& label
+			display block
+			color azul_negro
+			font-size 1.2em
+			margin 1em 0
+		& select
+			outline none
+			border 1px solid gris_verdoso
+			display block
+			color gris_verdoso
+			font-size 1em
+			height 2em
+			margin 1em auto
+			padding 0 1em
+			width 550px
+		& textarea 
+			display block
+			color gris_verdoso
+			font-size 1.2em
+			height 150px
+			max-height 150px
+			margin 1em 0
+			padding 1em 1em
+			width 100%
+			max-width 100%
+		& .submit-btn
+			text-align center
+			width 100%
+			& input[type="submit"]
+				color azul_negro
+				background none
+				border 2px solid azul_negro
+				border-radius .3em
+				font-weight bold
+				padding .4em 1.8em
+				margin 2em 0
+				outline none
+				&:active
+					color #bc2932
+					border 2px solid #bc2932
+
+#box-login
+	padding 1em
+	background white
+	border-radius .3em
+	position absolute
+	left 40%
+	top 40%
+	width 300px
+	& form
+		text-align center
+		& input[type="text"], input[type="password"]
+			height 30px
+			margin .8em auto
+			padding 0 .4em 
+			width 90%
+		& input[type="submit"]
+			border none 
+			outline none 
+			color white
+			background #515151
+			border-bottom .2em solid #343434
+			padding .4em .6em
+			margin .6em 0
+
+#cabezera
+	background #8a94b3
+	overflow hidden
+	height 65px
+	width 100%
+	& #company
+		float left
+		padding 1.2em
+		& a
+			color white
+			font-size 1.5em
+			text-decoration none 
+	& #control-account
+		float right
+		background #7b84a2
+		& .admin
+			float left
+			cursor pointer
+			border-right 1px solid rgba(255,255,255,0.3)
+			height 65px
+			padding .2em 1em 0em 1em
+			& figure
+				float left
+				& img 
+					margin-top .3em
+					width 50px
+			& div
+				float left
+				margin-top .8em
+				margin-left .5em
+				& p
+					color white 
+					font-size .8em
+					margin .2em
+			& span
+				color white
+				font-size 1.1em
+				float left
+				margin 1em 0 0 .8em 
+		& .show-content-user
+			display none
+			background white
+			box-shadow 0 2px 10px rgba(0,0,0,.2)
+			position absolute
+			top 70px
+			right 65px
+			width 300px
+			& ul a
+				text-decoration none
+				& li
+					padding 1em
+					color gris_verdoso
+					&:hover
+						background azul_cielo
+						color white
+			
+		& .close 
+			float left
+			padding 1em .6em 0 1em
+			& a
+				text-decoration none
+				& span
+					color white
+					font-size 2.5em
+
+#go-students
+	& .cont
+		margin 0 auto
+		padding 2em 0
+		width 800px
+		& h1
+			color azul_negro
+			font-size 1.3em
+		& p
+			border-bottom 2px dotted gris_verdoso
+			color #6f7075
+			font-size 1.1em
+			padding .4em
+			& span
+				color azul_negro
+
+#content-home
+	min-width 850px
+	& #menu-administrator
+		float left
+		min-width 600px
+		width 75%
+		& h1
+			color #707a91
+			margin .5em 2em
+		& ul
+			padding .5em 2em
+			text-align center
+			& .students 
+				background #64b3d7
+			& .teachers
+				background #59c3b9
+			& .tutor
+				background #f07465
+			& .groups
+				background #e6c94e
+			& .subjetmatters
+				background #74c35a
+			& .rating
+				background #7d6fd7
+			& li
+				display inline-block
+				margin 1em
+				padding 5em 2em
+				width 25%
+				& a
+					color white
+					font-size 1.5em
+					text-decoration none
+	& #reports-status
+		background #fff
+		height 100vh
+		float left
+		min-width 200px
+		width 25%
+
+#students-content
+	padding 1em
+	width 100%
+	& .title-panel
+		color gris_verdoso
+		font-size 1.9em
+		font-weight normal
+	& .actions-basics
+		margin .4em auto
+		width 700px
+		& form
+			display inline-block
+			& input[type="text"]
+				border none
+				border 1px solid #bbbbbb
+				border-radius .2em 0 0 .2em
+				color #898989
+				font-size .9em
+				height 30px
+				outline none
+				padding-left .3em
+				width 200px
+		& div
+			display inline-block
+			& .btn-add a
+				color black
+				text-decoration none
+	& .table-primary-students
+		border-radius .4em
+		color azul_negro
+		margin 2em auto
+		font-size 1.2em
+		width 90%
+		& .titles-t-p
+			background #e3e3e3
+		& tr 
+			& td, th
+				padding .5em
+			& td a
+				color azul_negro
+
+#teachers-content
+	padding 1em
+	width 100%
+	& .title-panel
+		color gris_verdoso
+		font-size 1.5em
+		font-weight normal
+	& .actions-basics
+		margin .4em auto
+		width 700px
+		& form
+			display inline-block
+			& input[type="text"]
+				border none
+				border 1px solid #bbbbbb
+				border-radius .2em 0 0 .2em
+				color #898989
+				font-size .9em
+				height 30px
+				outline none
+				padding-left .3em
+				width 200px
+		& div
+			display inline-block
+			& .btn-add a
+				color black
+				text-decoration none
+	& .table-primary-teachers
+		border-radius .4em
+		color azul_negro
+		margin 2em auto
+		font-size 1.2em
+		width 90%
+		& .titles-t-p
+			background #e3e3e3
+		& tr 
+			& td, th
+				padding .5em
+			& td a
+				color azul_negro
+
+#tutor-content
+	padding 1em
+	width 100%
+	& .title-panel
+		color gris_verdoso
+		font-size 1.5em
+		font-weight normal
+	& .actions-basics
+		margin .4em auto
+		width 700px
+		& form
+			display inline-block
+			& input[type="text"]
+				border none
+				border 1px solid #bbbbbb
+				border-radius .2em 0 0 .2em
+				color #898989
+				font-size .9em
+				height 30px
+				outline none
+				padding-left .3em
+				width 200px
+		& div
+			display inline-block
+			& .btn-add a
+				color black
+				text-decoration none
+	& .table-primary-tutor
+		border-radius .4em
+		color azul_negro
+		margin 2em auto
+		font-size 1.2em
+		width 90%
+		& .titles-t-p
+			background #e3e3e3
+		& tr 
+			& td, th
+				padding .5em
+			& td a
+				color azul_negro
+
+#group-content
+	padding 1em 0
+	width 100%
+	& .title-panel
+		color gris_verdoso
+		font-size 1.5em
+		font-weight normal
+	& .title-panel2
+		color gris_verdoso
+		font-size 1.5em
+		font-weight normal
+		text-align center
+		margin 2em 0
+	& .actions-basics
+		margin .4em auto
+		width 700px
+		& form
+			display inline-block
+			& input[type="text"]
+				border none
+				border 1px solid #bbbbbb
+				border-radius .2em 0 0 .2em
+				color #898989
+				font-size .9em
+				height 30px
+				outline none
+				padding-left .3em
+				width 200px
+		& div
+			display inline-block
+			.btn-add a
+				color black
+				text-decoration none
+	& .form-ctn
+		margin 2em auto
+		width 60%
+		& form
+			display inline-block
+			text-align center
+			width 100%
+			& label
+				display block
+				color azul_negro
+				font-size 1.2em
+				margin 1em 0
+			& select
+				outline none
+				border 1px solid gris_verdoso
+				display block
+				color gris_verdoso
+				font-size 1em
+				height 2em
+				margin 1em auto
+				padding 0 1em
+				width 550px
+			& textarea 
+				display block
+				color gris_verdoso
+				font-size 1.2em
+				height 150px
+				max-height 150px
+				margin 1em 0
+				padding 1em 1em
+				width 100%
+				max-width 100%
+			& .submit-btn
+				text-align center
+				width 100%
+				& input[type="submit"]
+					color azul_negro
+					background none
+					border 2px solid azul_negro
+					border-radius .3em
+					font-weight bold
+					padding .4em 1.8em
+					margin 2em 0
+					outline none
+					&:active
+						color #bc2932
+						border 2px solid #bc2932
+		& div
+			display inline-block
+	& .table-primary-group
+		border-radius .4em
+		color azul_negro
+		margin 2em auto
+		font-size 1.2em
+		width 90%
+		& .titles-t-p
+			background #e3e3e3
+		& tr 
+			& td, th
+				padding .5em
+			& td a
+				color azul_negro
+	& .botones_matter
+		text-align center
+		width 100%
+		& button
+			margin 1em
+			padding 1em
+			& a
+				text-decoration none
+				color black
+
+
+
+
+
+
+

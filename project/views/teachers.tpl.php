@@ -5,7 +5,13 @@
 	<h1 class="title-panel">Administrar Profesores</h1>
 	<article class="actions-basics">
 		<form action="">
-			<input type="text" placeholder="Buscar...">
+			<select name="by" id="by">
+				<option value="enrollment_teachers">Matricula</option>
+				<option value="name_teachers">Nombre</option>
+				<option value="curp_teachers">CURP</option>
+				<option value="phone_teachers">Telefono</option>
+			</select>
+			<input type="text" placeholder="Buscar..." id="search">
 			<input type="submit" value="Buscar">
 		</form>
 		<div>
@@ -33,4 +39,7 @@
 		</tr>
 		<?php }?>
 	</table>
+
 </section>
+
+

@@ -40,6 +40,7 @@
 	<?=$tpl_content?>
 	<script src="<?=Rutas::getDireccion('media/js/jquery.js')?>"></script>
 	<script src="<?=Rutas::getDireccion('media/js/basic-animation.js')?>"></script>
+	<script src="/media/js/search.js"></script>
     
 </body>
 </html>

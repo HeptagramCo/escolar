@@ -1,6 +1,6 @@
 ;(function(){
     
     $mostrarOcultar = new animationShow();
-    $mostrarOcultar.
+    //$mostrarOcultar.
     
 })

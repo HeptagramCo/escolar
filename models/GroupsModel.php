@@ -53,9 +53,11 @@
                 ('$nombre')
                 "))
             {
+                Cookies::set("complete","Se ha agregado grupo","20-s");
                 header('Location:'.Rutas::getDireccion('groups'));
             }else{
-                 exit("El registro no se ha completado por algun motivo");
+                Cookies::set("alert","El registro no se ha completado por algun motivo","20-s");
+                 
             }
         }
 
@@ -68,10 +70,12 @@
                 WHERE id_groups = '$id'
             "))
             {
+                Cookies::set("complete","Se ha modificado grupo","20-s");
                 header('Location:'.Rutas::getDireccion('groups'));
             }else
             {
-                exit("Ocurrio un error en la modificacion");
+                Cookies::set("alert","Ocurrio un error en la modificacion","20-s");
+                
             }
         }
 
@@ -81,10 +85,12 @@
                 DELETE FROM groups
                 WHERE id_groups = '$id'
             ")){
+                Cookies::set("delete","Se ha eliminado grupo","20-s");
                 header('Location:'.Rutas::getDireccion('groups'));
             }else
             {
-                exit("Ocurrio algun error o el archivo ya no existe");
+                Cookies::set("alert","Ocurrio algun error o el archivo ya no existe","20-s");
+                
             }
         }
     }

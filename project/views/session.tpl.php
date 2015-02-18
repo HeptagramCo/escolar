@@ -4,6 +4,7 @@
 	}else{
 		foreach($values as $row){
 			$user = $row["name_user"];
+			Cookies::set("complete","Hola Bienvenido: ¡" .$user."!","20-s");
 		}
 
 		if($user == $session){

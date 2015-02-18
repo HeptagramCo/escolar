@@ -87,9 +87,10 @@
                 ('$nombre')
                 "))
             {
+                Cookies::set("complete","Se ha agregado materia","20-s");
                 header('Location:'.Rutas::getDireccion('matter'));
             }else{
-                 exit("El registro no se ha completado por algun motivo");
+                 Cookies::set("alert","El registro no se ha completado por algun motivo","20-s");
             }
         }
 
@@ -102,10 +103,11 @@
                 WHERE id_subject_matter = '$id'
             "))
             {
+                Cookies::set("complete","Se ha editado materia","20-s");
                 header('Location:'.Rutas::getDireccion('matter'));
             }else
             {
-                exit("Ocurrio un error en la modificacion");
+                Cookies::set("alert","Ocurrio un error en la modificacion","20-s");
             }
         }
 
@@ -115,10 +117,11 @@
                 DELETE FROM users
                 WHERE id_user = '$id'
             ")){
-                exit("Se a eliminado correctamente");
+                Cookies::set("delete","Se a eliminado correctamente","20-s");
+
             }else
             {
-                exit("Ocurrio algun error o el archivo ya no existe");
+                Cookies::set("alert","Ocurrio algun error o el archivo ya no existe","20-s");                
             }
         }
     }

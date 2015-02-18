@@ -55,9 +55,10 @@
                ('$rating', '$student', '$matter', '$cycle')
             "))
             {
+                Cookies::set("complete","Se ha agregado calificacion a estudiante","20-s");
                header('Location:'.Rutas::getDireccion('students'));
             }else{
-               exit("El registro no se ha completado por algun motivo");
+                Cookies::set("complete","El registro no se ha completado por algun motivo","20-s");
             }
         }
 
@@ -73,10 +74,11 @@
                         WHERE id_students = '$id'
                     "))
                     {
+                        Cookies::set("complete","Se ha editado estudiante","20-s");
                         header('Location:'.Rutas::getDireccion('students'));
                     }else
                     {
-                        exit("Ocurrio un error en la modificacion");
+                        Cookies::set("alert","Ocurrio un error en la modificacion","20-s");
                     }
                 }else{
                     exit("El usuario ya existe");
@@ -89,10 +91,10 @@
                         WHERE id_students = '$id'
                     "))
                     {
-                        exit("Se ha modificado correctamente");
+                        Cookies::set("complete","Se ha editado estudiante","20-s");
                     }else
                     {
-                        exit("Ocurrio un error en la modificacion");
+                        Cookies::set("alert","Ocurrio un error en la modificacion","20-s");
                     }
             }
         }
@@ -103,10 +105,11 @@
                 DELETE FROM students
                 WHERE id_students = '$id'
             ")){
+                Cookies::set("delete","Se ha eliminado estudiante","20-s");
                 header('Location:'.Rutas::getDireccion('students'));
             }else
             {
-                exit("Ocurrio algun error o el archivo ya no existe");
+                Cookies::set("alert","Ocurrio algun error o el archivo ya no existe","20-s");
             }
         }
     }

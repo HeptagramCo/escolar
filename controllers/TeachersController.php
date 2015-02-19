@@ -68,6 +68,5 @@ class TeachersController{
         $consulta = new TeachersModel();
         $values = $consulta -> search($valor,$by);
         return $values;
-
     }
 }

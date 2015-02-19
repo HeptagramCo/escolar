@@ -26,6 +26,40 @@ body
 table, th, td
 	border 1px solid #bfbfbf
 
+busqueda()
+	.search_values
+		position absolute
+		background white
+		box-shadow 0px 0px 3px rgba(0, 0, 0, .45)
+		overflow auto
+		top 2.5em
+		text-align center 
+		max-height 350px
+		left 6em
+		width 350px
+		& .cont
+			border-bottom 1px solid #7E7A7A
+			overflow hidden
+			padding .3em .5em
+			width 100%
+			&:hover
+				background #EEEEEE
+			& .data
+				color #34495e
+				text-align left
+				float left
+				width 180px
+				& .name
+					font-size 1.1em
+					margin 0
+			& .action
+				float left
+				width 100px
+				& a
+					color #34495e
+					text-decoration none
+						
+
 
 #breadcrumb
 	padding 1em
@@ -611,6 +645,7 @@ table, th, td
 		font-weight normal
 	& .actions-basics
 		margin .4em auto
+		position relative
 		width 700px
 		& form
 			display inline-block
@@ -651,8 +686,10 @@ table, th, td
 		font-size 1.5em
 		font-weight normal
 	& .actions-basics
+		position relative
 		margin .4em auto
 		width 700px
+		busqueda()
 		& form
 			display inline-block
 			& input[type="text"]
@@ -664,7 +701,7 @@ table, th, td
 				height 30px
 				outline none
 				padding-left .3em
-				width 200px
+				width 350px
 		& div
 			display inline-block
 			& .btn-add a
@@ -739,8 +776,10 @@ table, th, td
 		text-align center
 		margin 2em 0
 	& .actions-basics
+		position relative
 		margin .4em auto
-		width 700px
+		width 700px		
+		busqueda()
 		& form
 			display inline-block
 			& input[type="text"]

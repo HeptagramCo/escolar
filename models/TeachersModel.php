@@ -47,7 +47,7 @@
             $query = $this->conn->getConsultar("
                 SELECT *
                 FROM teachers
-                WHERE $by LIKE '%.$value.%'
+                WHERE $by LIKE '%$value%'
             ");
 
             while($row = $query->fetch_array(MYSQLI_ASSOC)){

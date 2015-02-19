@@ -93,6 +93,23 @@
                 
             }
         }
+
+        public function search($value,$by)
+        {
+            $query = $this->conn->getConsultar("
+                SELECT *
+                FROM groups
+                WHERE $by LIKE '%$value%'
+            ");
+
+            while($row = $query->fetch_array(MYSQLI_ASSOC)){
+                $this->rowsAll[] = $row;
+            }
+
+            return $this->rowsAll;
+        }
+
+
     }
 
 

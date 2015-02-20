@@ -48,5 +48,12 @@ class GroupsController{
         }
     }
 
+    public function searchAction(){
+        $valor = $_POST['consulta'];
+        $by = $_POST['by'];
+        $consulta = new GroupsModel();
+        $values = $consulta -> search($valor,$by);
+        return $values;
+    }
     
 }

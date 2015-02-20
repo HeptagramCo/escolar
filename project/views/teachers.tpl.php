@@ -5,11 +5,19 @@
 	<h1 class="title-panel">Administrar Profesores</h1>
 	<article class="actions-basics">
 		<form action="">
-			<input type="text" placeholder="Buscar...">
+			<select name="by" id="by">
+				<option value="name_teachers">Nombre</option>
+				<option value="enrollment_teachers">Matricula</option>
+				<option value="curp_teachers">CURP</option>
+				<option value="phone_teachers">Telefono</option>
+			</select>
+			<input type="text" autocomplete="off" placeholder="Buscar..." id="search">
 			<input type="submit" value="Buscar">
 		</form>
 		<div>
 			<button class="btn-add"><a href="teachers/add">Añadir Maestro</a></button>
+		</div>
+		<div class="search_values">
 		</div>
 	</article>
 	<table class="table-primary-teachers" >
@@ -33,4 +41,9 @@
 		</tr>
 		<?php }?>
 	</table>
+
+	
+
 </section>
+
+

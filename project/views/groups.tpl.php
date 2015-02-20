@@ -4,12 +4,15 @@
 	</div>
 	<h1 class="title-panel">Administrar Grupos</h1>
 	<article class="actions-basics">
-		<form action="">
-			<input type="text" placeholder="Buscar...">
-			<input type="submit" value="Buescar">
+		<form action="" method="post">
+			<input type="text" placeholder="Buscar..." id="search" autocomplete="off">
+			<input type="submit" value="Buscar">
+			<input type="hidden" name="by" id="by" value="year_section_groups">
 		</form>
 		<div>
 			<button class="btn-add"><a href="/groups/add">Añadir Grupo</a></button>
+		</div>
+		<div class="search_values">
 		</div>
 	</article>
 	<table class="table-primary-group">

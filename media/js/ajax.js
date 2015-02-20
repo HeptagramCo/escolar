@@ -20,7 +20,7 @@ $("#submit-form").click(function(e){
 		    	}else{
 		        	$.ajax({
 					        type: "POST",
-					        url: ruta + "/passvalue/",
+					        url: ruta + "/passValue/",
 					        data: {
 					        	password : password
 					        },

@@ -61,4 +61,12 @@ class TeachersController{
             header('Location:'.Rutas::getDireccion('login'));
         }
     }
+
+    public function searchAction(){
+        $valor = $_POST['consulta'];
+        $by = $_POST['by'];
+        $consulta = new TeachersModel();
+        $values = $consulta -> search($valor,$by);
+        return $values;
+    }
 }

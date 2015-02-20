@@ -42,6 +42,22 @@
         
         }
 
+        public function search($value,$by)
+        {
+            $query = $this->conn->getConsultar("
+                SELECT *
+                FROM teachers
+                WHERE $by LIKE '%$value%'
+            ");
+
+            while($row = $query->fetch_array(MYSQLI_ASSOC)){
+                $this->rowsAll[] = $row;
+            }
+
+            return $this->rowsAll;
+        }
+
+
         public function set($user, $modify = array())
         {
 
@@ -55,12 +71,13 @@
                             ('$matricula', '$nombre', '$user', '$curp', '$sex', '$nacimiento', '$direccion', '$postal', '$telefono', '$pass', '$school', '$grupo')
                         "))
                     {
+                        Cookies::set("complete","Se ha agregado Profesor","20-s");
                         header('Location:'.Rutas::getDireccion('teachers'));
                     }else{
-                        exit("El registro no se ha completado por algun motivo");
+                        Cookies::set("alert","El registro no se ha completado por algun motivo","20-s");
                     }
             }else{
-                exit("El usuario ya existe");
+                Cookies::set("alert","El usuario ya existe","20-s");
             }
         }
 
@@ -76,13 +93,14 @@
                         WHERE id_teachers = '$id'
                     "))
                     {
+                       Cookies::set("edit","Se ha editado correctamente","20-s");   
                        header('Location:'.Rutas::getDireccion('teachers'));
                     }else
                     {
-                        exit("Ocurrio un error en la modificacion");
+                        Cookies::set("alert","Ocurrio un error en la modificacion","20-s");
                     }
                 }else{
-                exit("El usuario ya existe");
+                    Cookies::set("alert","El usuario ya existe","20-s");
                 }
             }else{
                 extract($values);
@@ -92,10 +110,11 @@
                         WHERE id_teachers = '$id'
                     "))
                     {
+                        Cookies::set("edit","Se ha editado correctamente","20-s");
                         header('Location:'.Rutas::getDireccion('teachers'));
                     }else
                     {
-                        exit("Ocurrio un error en la modificacion");
+                        Cookies::set("alert","Ocurrio un error en la modificacion","20-s");
                     }
             }
         }
@@ -106,10 +125,11 @@
                 DELETE FROM teachers
                 WHERE id_teachers = '$id'
             ")){
+                Cookies::set("delete","Se ha eliminado Profesor","20-s");
                 header('Location:'.Rutas::getDireccion('teachers'));
             }else
             {
-                exit("Ocurrio algun error o el archivo ya no existe");
+                Cookies::set("alert","Ocurrio un error al eliminar","20-s");
             }
         }
     }

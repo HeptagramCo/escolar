@@ -55,12 +55,13 @@
                             ('$nombre', '$user', '$curp', '$sex', '$direccion', '$postal', '$telefono', '$pass', '$school')
                         "))
                     {
+                        Cookies::set("complete","Se ha agregado Tutor","20-s");
                         header('Location:'.Rutas::getDireccion('tutor'));
                     }else{
-                        exit("El registro no se ha completado por algun motivo");
+                        Cookies::set("alert","El registro no se ha completado por algun motivo","20-s");
                     }
             }else{
-                exit("El usuario ya existe");
+                Cookies::set("alert","El Tutor ya existe","20-s");
             }
         }
 
@@ -76,13 +77,15 @@
                         WHERE id_tutor = '$id'
                     "))
                     {
+                        Cookies::set("complete","Se ha editado Tutor","20-s");
                         header('Location:'.Rutas::getDireccion('tutor'));
                     }else
                     {
-                        exit("Ocurrio un error en la modificacion");
+                        Cookies::set("alert","Ocurrio un error al modificar tutor","20-s");
                     }
                 }else{
-                    exit("El usuario ya existe");
+                    Cookies::set("alert","El tutor ya existe","20-s");
+                    
                 }
             }else{
                 extract($values);
@@ -92,10 +95,11 @@
                         WHERE id_tutor = '$id'
                     "))
                     {
+                        Cookies::set("complete","Se ha editado Tutor","20-s");
                         header('Location:'.Rutas::getDireccion('tutor'));
                     }else
                     {
-                        exit("Ocurrio un error en la modificacion");
+                        Cookies::set("alert","Ocurrio un error al modificar tutor","20-s");                  
                     }
             }
         }
@@ -106,10 +110,11 @@
                 DELETE FROM tutor
                 WHERE id_tutor = '$id'
             ")){
+                Cookies::set("delete","Se ha eliminado Tutor","20-s");
                 header('Location:'.Rutas::getDireccion('tutor'));
             }else
             {
-                exit("Ocurrio algun error o el archivo ya no existe");
+                Cookies::set("alert","Ocurrio un error al elimnar tutor","20-s");
             }
         }
     }

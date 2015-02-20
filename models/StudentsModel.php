@@ -92,12 +92,13 @@
                             ('$matricula', '$lista', '$nombre', '$user', '$curp', '$sex', '$nacimiento', '$direccion', '$postal', '$telefono', '$telefonoA', '$enfermedad', '$ciudad', '$municipio',  '$pass', '$tutor', '$school', '$grupo')
                         "))
                     {
+                         Cookies::set("complete","Se ha agregado estudiante","20-s");
                         header('Location:'.Rutas::getDireccion('students'));
                     }else{
-                        exit("El registro no se ha completado por algun motivo");
+                        Cookies::set("alert","El registro no se ha completado por algun motivo","20-s");
                     }
             }else{
-                exit("El usuario ya existe");
+                Cookies::set("complete","Estudiante ya registrado","20-s");
             }
         }
 
@@ -113,13 +114,14 @@
                         WHERE id_students = '$id'
                     "))
                     {
+                        Cookies::set("complete","Se ha editado estudiante","20-s");
                         header('Location:'.Rutas::getDireccion('students'));
                     }else
                     {
-                        exit("Ocurrio un error en la modificacion");
+                      Cookies::set("alert","Ocurrio un error en la modificacion","20-s");
                     }
                 }else{
-                    exit("El usuario ya existe");
+                   Cookies::set("alert","Estudiante ya registrado","20-s");
                 }
             }else{
                 extract($values);
@@ -129,10 +131,10 @@
                         WHERE id_students = '$id'
                     "))
                     {
-                        exit("Se ha modificado correctamente");
+                       Cookies::set("complete","Se ha editado estudiante","20-s");
                     }else
                     {
-                        exit("Ocurrio un error en la modificacion");
+                        Cookies::set("alert","Ocurrio un error en la modificacion","20-s");
                     }
             }
         }
@@ -143,10 +145,11 @@
                 DELETE FROM students
                 WHERE id_students = '$id'
             ")){
+                Cookies::set("delete","Se ha eliminado estudiante","20-s");
                 header('Location:'.Rutas::getDireccion('students'));
             }else
             {
-                exit("Ocurrio algun error o el archivo ya no existe");
+                Cookies::set("alert","Ocurrio algun error o el archivo ya no existe","20-s");
             }
         }
     }
